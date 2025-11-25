@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import bccLogo from '../images/bcc-logo.png';
+import emDashLogo from '../images/em-dash-logo.png';
+import grandPlanLogo from '../images/grand-plan-logo.png';
+---
+
+ <header class="flex justify-end items-center gap-8 px-12 py-16">
+    <img src={bccLogo.src} alt="Brixton Community Cinema Logo" class="h-14">
+    <img src={emDashLogo.src} alt="Em Dash Logo" class="h-14">
+    <img src={grandPlanLogo.src} alt="Grand Plan Logo" class="h-14">
+</header>
