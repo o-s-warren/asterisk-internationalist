@@ -121,7 +121,7 @@ const equalsLine = '='.repeat(360);
 
     <!-- DESKTOP TITLE -->
     <div class="absolute top-52 xl:top-44 left-12 z-20 hidden md:block">
-      <h1 class="font-libre-baskerville text-7xl lg:text-8xl xl:text-[112px] italic headline-leading">
+      <h1 class="font-libre-baskerville text-7xl lg:text-8xl xl:text-[112px] italic">
         Queers Don't Just<br>
         <span class="inline-flex items-center md:mb-3 lg:mb-6">
           <span class="font-azeret-mono text-base not-italic mr-6">Rizky Rahad</span>
@@ -936,67 +936,3 @@ const equalsLine = '='.repeat(360);
   
   <Footer />
 </ArticleLayout>
-
-<style>
-  /* Article-specific prose styles */
-  .prose-asterisk p {
-    font-family: var(--font-courier-prime);
-    font-size: 0.9375rem;
-    line-height: 1.75;
-    margin-bottom: 1.5rem;
-  }
-
-  .prose-asterisk h2 {
-    font-family: var(--font-libre-baskerville);
-    font-size: 1.25rem;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1.4;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-    max-width: 90%;
-  }
-
-  .prose-asterisk h3 {
-    font-family: var(--font-archivo);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-  }
-
-  .prose-asterisk em {
-    font-style: italic;
-  }
-
-  .prose-asterisk a {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .prose-asterisk a:hover {
-    opacity: 0.7;
-  }
-
-  /* Horizontal rule as asterisk divider */
-  .prose-asterisk hr {
-    border: none;
-    text-align: center;
-    margin: 2.5rem 0;
-  }
-
-  .prose-asterisk hr::before {
-    content: '* * *';
-    font-family: var(--font-courier-prime);
-    font-size: 0.875rem;
-    letter-spacing: 0.5em;
-    color: #1a1a1a;
-  }
-
-  /* Fine-tuned typography */
-    .headline-leading {
-      line-height: 0.95;
-    }
-</style>

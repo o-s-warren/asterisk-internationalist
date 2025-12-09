@@ -16,13 +16,6 @@
   --color-asterisk-caption-light-gray: #acacac;
   --color-asterisk-caption-dark-gray: #414141;
 }
-    
-@layer base {
-  body {
-    font-family: var(--font-mono);
-    background-color: var(--color-cream);
-  }
-}
 
 @layer components {
   
@@ -51,6 +44,16 @@
   .resource-item .caption a {
     @apply underline underline-offset-2;
   }
+
+  .divider-equals {
+    font-family: var(--font-courier-prime);
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    line-height: 1;
+    color: var(--color-asterisk-divider);
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 /* Base styles */
@@ -58,105 +61,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Article prose customisation */
-.prose-asterisk {
-  --tw-prose-body: #1a1a1a;
-  --tw-prose-headings: #1a1a1a;
-  --tw-prose-links: #1a1a1a;
-  --tw-prose-bold: #1a1a1a;
-  --tw-prose-quotes: #1a1a1a;
-  --tw-prose-quote-borders: #1a1a1a;
-}
-
-.prose-asterisk p {
-  font-family: var(--font-courier-prime);
-  font-size: 0.9375rem;
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
-}
-
-/* Pull-quote H2 styling - the prominent questions that break the article flow */
-.prose-asterisk h2 {
-  font-family: var(--font-libre-baskerville);
-  font-size: 1.375rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.35;
-  margin-top: 3rem;
-  margin-bottom: 1.75rem;
-  max-width: 85%;
-  /* Subtle left offset to distinguish from body text */
-  position: relative;
-}
-
-/* Add breathing room when H2 follows a paragraph */
-.prose-asterisk p + h2 {
-  margin-top: 2.5rem;
-}
-
-/* Reduce space when H2 is followed by another H2 or blockquote */
-.prose-asterisk h2 + h2,
-.prose-asterisk h2 + blockquote {
-  margin-top: 1.5rem;
-}
-
-.prose-asterisk h3 {
-  font-family: var(--font-archivo);
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.prose-asterisk blockquote {
-  font-family: var(--font-libre-baskerville);
-  font-style: italic;
-  border-left: 2px solid #1a1a1a;
-  padding-left: 1.5rem;
-  margin-left: 0;
-}
-
-.prose-asterisk a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.prose-asterisk a:hover {
-  opacity: 0.7;
-}
-
-/* Horizontal rule styling - the *** dividers in markdown */
-.prose-asterisk hr {
-  border: none;
-  text-align: center;
-  margin: 2.5rem 0;
-}
-
-.prose-asterisk hr::before {
-  content: '* * *';
-  font-family: var(--font-courier-prime);
-  font-size: 0.875rem;
-  letter-spacing: 0.5em;
-  color: #1a1a1a;
-}
-
-/* Equal signs divider for article list */
-.divider-equals {
-  font-family: var(--font-courier-prime);
-  font-size: 1rem;
-  letter-spacing: 0.15em;
-  line-height: 1;
-  color: #1a1a1a;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 /* Selection colour */
 ::selection {
-  background-color: #1a1a1a;
+  background-color: var(--color-asterisk-divider);
   color: var(--color-asterisk-beige);
 }
-
-
