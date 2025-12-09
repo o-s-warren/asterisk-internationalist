@@ -16,51 +16,42 @@
   --color-asterisk-caption-light-gray: #acacac;
   --color-asterisk-caption-dark-gray: #414141;
 }
+    
+@layer base {
+  body {
+    font-family: var(--font-mono);
+    background-color: var(--color-cream);
+  }
+}
 
-@theme {
-      --color-cream: #fffffb;
-      --color-peach: #ffcb9f;
-      --font-mono: 'Azeret Mono', monospace;
-      
-      /* Custom shadow for images */
-      --shadow-soft: 0 0 7.6px -1px rgba(0, 0, 0, 0.15);
-    }
-    
-    @layer base {
-      body {
-        font-family: var(--font-mono);
-        background-color: var(--color-cream);
-      }
-    }
-    
-    @layer components {
-      
-      .caption {
-        font-size: 10px;
-        line-height: 1.5;
-      }
-      
-      .img-shadow {
-        box-shadow: var(--shadow-soft);
-      }
-      
-      /* Resource item component */
-      .resource-item {
-        @apply flex flex-col items-center;
-      }
-      
-      .resource-item img {
-        @apply w-full h-full object-cover;
-      }
-      
-      .resource-item .caption {
-        @apply text-center mt-4 max-w-[216px];
-      }
-      
-      .resource-item .caption a {
-        @apply underline underline-offset-2;
-      }
-    }
+@layer components {
+  
+  .caption {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  
+  .img-shadow {
+    box-shadow: 0 0 7.6px -1px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Resource item component */
+  .resource-item {
+    @apply flex flex-col items-center;
+  }
+  
+  .resource-item img {
+    @apply w-full h-full object-cover;
+  }
+  
+  .resource-item .caption {
+    @apply text-center mt-4 max-w-[216px];
+  }
+  
+  .resource-item .caption a {
+    @apply underline underline-offset-2;
+  }
+}
 
 /* Base styles */
 html {
@@ -149,28 +140,6 @@ html {
   font-size: 0.875rem;
   letter-spacing: 0.5em;
   color: #1a1a1a;
-}
-
-/* Article title styling */
-.title-text {
-  /* Allow natural word breaking but encourage specific break points */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: none;
-}
-
-/* Dotted divider pattern matching the design */
-.divider-dotted {
-  background-image: repeating-linear-gradient(
-    to right,
-    transparent,
-    transparent 2px,
-    currentColor 2px,
-    currentColor 4px
-  );
-  background-size: 6px 1px;
-  background-repeat: repeat-x;
-  background-position: left center;
 }
 
 /* Equal signs divider for article list */
