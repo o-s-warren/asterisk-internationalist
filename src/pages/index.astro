@@ -3,79 +3,176 @@ import "../styles/global.css";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
 import asteriskInternationalistLogo from '../images/asterisk-internationalist-logo.svg';
 import ascii from '../images/ascii.png';
 import homepageCollage from '../images/homepage-collage.jpg';
+import issue1Thumbnail from '../images/issue-1-thumbnail.jpg';
 
-
-// Fetch all articles from the content collection
-const allArticles = await getCollection('articles');
-// Sort by date, most recent first
-const sortedArticles = allArticles.sort((a, b) => 
-  b.data.date.valueOf() - a.data.date.valueOf()
-);
+// Generate the equals divider string
+const equalsLine = '='.repeat(360);
 ---
 
 <BaseLayout title="asterisk internationalist">
-  <Header />
+  <Header variant="home" />
   
-<main class="flex-1 container w-full">
+  <main class="flex-1 w-full">
 
-	<section class="landing relative h-[80vh]]">
-		<img src={asteriskInternationalistLogo.src} alt="Asterisk Internationalist Logo" class="w-11/12 px-8">
-		<div class="w-dvw">
-			<p class="font-mono mx-auto mt-8 px-4 leading-tight -rotate-[0.008203047rad] absolute right-0 text-lg">
-				***************************************************************************************<br>
-				This journal looks back at ************************* the Black Lesbian and Gay Centre's<br>
+    <!-- Landing Section -->
+    <section class="landing relative px-8 md:px-12 pb-16 md:pb-24">
+      <!-- Main logo -->
+      <img 
+        src={asteriskInternationalistLogo.src} 
+        alt="*asterisk internationalist" 
+        class="w-full max-w-5xl"
+      >
+      
+      <!-- Asterisk mission statement -->
+      <div class="mt-8 md:mt-12 max-w-3xl ml-auto mr-16">
+        <p class="font-azeret-mono text-xs leading-relaxed tracking-wide">
+        ********** ************************************* ****************************************<br>
+				This journal looks back at ******************* ****** the Black Lesbian and Gay Centre's<br>
 				********* (1985 to 2000) newsletter,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***********************************************************<br>
-				to ask how ********************************** text *********************<br>
-				***********************************************************<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*******************************can best serve these communities today..<br>
-				***************************************************************************************
-			</p>
-		</div>
-		<img src={ascii.src} alt="ASCII Art" class="mt-44 mb-24 ml-24 w-56">
-		<div class="font-courier-prime max-w-lg mx-auto mt-8 px-4 mr-16 leading-tight absolute top-0 right-0 text-sm -z-10 opacity-10">
-			<p class="mb-8">After working on a screening of Veronica McKenzie's revelatory documentary <span class="italic">Under Your Nose</span> (2014), we were driven to look into and re-imagine the paper archives that it featured. Used in the film as testament to the media-based forms of communication and organising that had been undertaken by Britain's queer racialised communities in the '80s and '90s, they spoke to our interest in the aesthetic and editorial elements of community mobilisation while helping us better understand and connect with the labour, struggles and provocations of our predecessors.</p>
-			<p class="mb-8">The original newsletter was a vital tool for transmitting news, announcing gatherings, sharing eulogies, missed connections, lonely hearts, international reporting, job listings and housing solutions, as well as supporting grassroots organising. Though the context has shifted, the newsletter's purpose—to connect and inform—remains just as relevant. The BLGC was effectively dismantled by Thatcher-era austerity, a political assault whose deployment has only intensified, with social spaces, cultural output and marginalised communities first in the line of attack. Meanwhile, our understanding of the umbrella terms 'LGBT' and 'black', as well as their intersections, has evolved and continues to invite interrogation and redefinition.</p>
-			<p class="mb-8">This project embraces the value of long-form text as a space for reflection—both playful and serious—on the pressing issues affecting these communities. By revisiting the radical aims of the original publication, it will bring together contemporary writers, artists, and activists to create a critical, internationalist exploration of queer, racialised experiences as both their cinematic and real-life forms in the UK and beyond.</p>
-		</div>
-	</section>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;********* *********************************** ***************<br>
+				to ask how ******************* *************** text *********************<br>
+				************** ***************************** ****************<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*************** ****************can best serve these communities today..<br>
+				********************** ************************************* ****************************
+        </p>
+      </div>
 
-	<section class="about">
-		<img src={homepageCollage.src} alt="Collage" class="mt-44 mb-24 ml-24 max-w-lg float-left">
-		<div class="font-courier-prime max-w-lg mx-auto mt-8 px-4 mr-16 leading-tight float-right text-sm">
-			<p class="mb-8">After working on a screening of Veronica McKenzie's revelatory documentary <span class="italic">Under Your Nose</span> (2014), we were driven to look into and re-imagine the paper archives that it featured. Used in the film as testament to the media-based forms of communication and organising that had been undertaken by Britain's queer racialised communities in the '80s and '90s, they spoke to our interest in the aesthetic and editorial elements of community mobilisation while helping us better understand and connect with the labour, struggles and provocations of our predecessors.</p>
-			<p class="mb-8">The original newsletter was a vital tool for transmitting news, announcing gatherings, sharing eulogies, missed connections, lonely hearts, international reporting, job listings and housing solutions, as well as supporting grassroots organising. Though the context has shifted, the newsletter's purpose—to connect and inform—remains just as relevant. The BLGC was effectively dismantled by Thatcher-era austerity, a political assault whose deployment has only intensified, with social spaces, cultural output and marginalised communities first in the line of attack. Meanwhile, our understanding of the umbrella terms 'LGBT' and 'black', as well as their intersections, has evolved and continues to invite interrogation and redefinition.</p>
-			<p class="mb-8">This project embraces the value of long-form text as a space for reflection—both playful and serious—on the pressing issues affecting these communities. By revisiting the radical aims of the original publication, it will bring together contemporary writers, artists, and activists to create a critical, internationalist exploration of queer, racialised experiences as both their cinematic and real-life forms in the UK and beyond.</p>
-			<p class="mb-8 leading-0"><span class="font-azeret-mono text-xl leading-0">✱</span> Abiba, Aarushi & Saundra<br><span class="font-azeret-mono text-xl">&nbsp;</span> Brixton Community Cinema, Em—Dash</p>
-		</div>
+      <!-- ASCII art -->
+      <img 
+        src={ascii.src} 
+        alt="" 
+        aria-hidden="true"
+        class="mt-4 md:mt-0 ml-8 md:ml-16 w-40 md:w-56"
+      >
 
-	</section>
+      <!-- Faded background text -->
+      <div class="font-courier-prime max-w-md absolute top-32 right-8 md:right-16 text-xs leading-relaxed -z-10 opacity-[0.08] hidden lg:block">
+        <p class="mb-6">Asterisk Internationalist draws its inspiration from the Black Lesbian and Gay Centre’s newsletter (published 1985-2000), asking how text can best serve these communities today. After working on a screening of Veronica McKenzie’s revelatory documentary <span class="italic">Under Your Nose</span> (2014), we were compelled to look into and re-imagine the paper archives that it featured. Used in the film as testament to the media-based forms of communication and organising that had been undertaken by Britain’s queer racialised communities in the ‘80s and ‘90s, they spoke to our interest in the aesthetic and editorial elements of community mobilisation while helping us better understand and connect with the labour, struggles and provocations of our predecessors.</p>
+        <p class="mb-6">The original newsletter was a vital tool for transmitting news, announcing gatherings, sharing eulogies, missed connections, lonely hearts, international reporting, job listings and housing solutions, as well as supporting grassroots organising. Though the context has shifted, the newsletter’s purpose–to connect and inform– remains just as relevant. The BLGC was effectively dismantled by Thatcher-era austerity, an ideological project whose deployment has only intensified in its contemporary iterations, with social spaces, cultural output and marginalised communities first in the line of attack. Meanwhile, our understanding of the umbrella terms ‘LGBT’ and ‘black’, as well as their intersections, has evolved and continues to invite interrogation and redefinition.</p>
+        <p class="mb-6">This project embraces the value of long-form text as a space for reflection—both playful and serious—on the pressing issues affecting these communities. Revisiting the radical aims of the original publication, it brings together contemporary writers, artists, and activists to create a critical, internationalist exploration of queer, racialised experiences in both their artistic representations and lived forms.</p>
+      </div>
+    </section>
 
-    <!-- Articles List -->
-    <!-- <section class="py-16">
-      <ul class="divide-y divide-dotted divide-black">
-        {sortedArticles.map((article, index) => (
-          <li class="py-6 first:pt-0">
-            <a href={`/articles/${article.slug}`} class="block group">
-              <div class="flex items-baseline gap-4">
-                <span class="font-mono text-sm opacity-50">*{index + 1}</span>
-                <div class="flex-1">
-                  <p class="font-mono text-sm mb-1 opacity-70">{article.data.author}</p>
-                  <h2 class="text-2xl font-serif group-hover:opacity-70 transition-opacity">
-                    {article.data.title}
-                  </h2>
+<!-- About Section -->
+<section class="about px-8 md:px-12 pb-16 md:pb-24 overflow-hidden">
+  <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+    <!-- Collage image -->
+    <img 
+      src={homepageCollage.src} 
+      alt="Collage featuring Black Lesbian and Gay Centre newsletter and Under Your Nose documentary" 
+      class="w-full md:w-96 lg:w-md md:shrink-0 self-start"
+    >
+    
+    <!-- About text -->
+    <div class="font-courier-prime text-sm leading-relaxed max-w-prose md:mx-auto">
+      <p class="mb-6">Asterisk Internationalist draws its inspiration from the Black Lesbian and Gay Centre’s newsletter (published 1985-2000), asking how text can best serve these communities today. After working on a screening of Veronica McKenzie’s revelatory documentary <span class="italic">Under Your Nose</span> (2014), we were compelled to look into and re-imagine the paper archives that it featured. Used in the film as testament to the media-based forms of communication and organising that had been undertaken by Britain’s queer racialised communities in the ‘80s and ‘90s, they spoke to our interest in the aesthetic and editorial elements of community mobilisation while helping us better understand and connect with the labour, struggles and provocations of our predecessors.</p>
+      <p class="mb-6">The <a href="https://www.bishopsgate.org.uk/collections/black-lesbian-and-gay-centre/" class="underline text-asterisk-footer-grey hover:text-black"">original newsletter</a> was a vital tool for transmitting news, announcing gatherings, sharing eulogies, missed connections, lonely hearts, international reporting, job listings and housing solutions, as well as supporting grassroots organising. Though the context has shifted, the newsletter’s purpose–to connect and inform– remains just as relevant. The BLGC was effectively dismantled by Thatcher-era austerity, an ideological project whose deployment has only intensified in its contemporary iterations, with social spaces, cultural output and marginalised communities first in the line of attack. Meanwhile, our understanding of the umbrella terms ‘LGBT’ and ‘black’, as well as their intersections, has evolved and continues to invite interrogation and redefinition.</p>
+      <p class="mb-6">This project embraces the value of long-form text as a space for reflection—both playful and serious—on the pressing issues affecting these communities. Revisiting the radical aims of the original publication, it brings together contemporary writers, artists, and activists to create a critical, internationalist exploration of queer, racialised experiences in both their artistic representations and lived forms.</p>
+      <p class="leading-normal">
+        <span class="font-azeret-mono text-lg leading-none">✱</span> Abiba, Aarushi & Saundra<br>
+        <span class="inline-block w-[1.125rem]"></span>Brixton Community Cinema + Em—Dash
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Articles List Section -->
+    <section class="articles px-4 md:px-8 pb-16 md:pb-24">
+      <div class="max-w-6xl mx-auto [&:has(article:hover)_article:not(:hover)]:opacity-30">
+        
+        <article class="transition-opacity duration-600">
+          <!-- Divider -->
+          <div class="divider-equals overflow-hidden py-4 text-asterisk-divider" aria-hidden="true">
+            {equalsLine}
+          </div>
+          
+          <!-- Article entry -->
+          <a href="/queers-dont-just-shoot-back" class="block group py-4">
+            <div class="flex items-start gap-6 md:gap-12">
+              <span class="font-azeret-mono font-medium text-sm md:text-base flex-shrink-0 pt-1">
+                <span class="text-lg leading-none">✱</span> 1
+              </span>
+              <div class="flex-1">
+                <p class="font-azeret-mono text-sm mb-2 tracking-wide">
+                  Rizky Rahad
+                </p>
+                <h2 class="font-libre-baskerville text-xl md:text-2xl lg:text-3xl leading-snug group-hover:underline transition-all duration-600">
+                  Queers Don't Just Shoot Back— We Nurture The Fire
+                </h2>
+                
+                <!-- Hidden content that appears on hover -->
+                <div class="hidden group-hover:flex items-start gap-6 mt-6 animate-in fade-in duration-600">
+                  <img src={issue1Thumbnail.src} alt="" class="w-48 h-auto object-cover" />
+                  <p class="font-courier text-base leading-relaxed">
+                    Rizky Rahad on Indonesia's history of Third Cinema, mobilising queer community amidst a revolution and reflections since publishing his book <span class="italic">Queers Shoot Back!</span>
+                  </p>
                 </div>
               </div>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section> -->
+            </div>
+          </a>
+        </article>
+
+        {/*
+        <article class="transition-opacity duration-600">
+          <!-- Divider -->
+          <div class="divider-equals overflow-hidden py-4 text-asterisk-divider" aria-hidden="true">
+            {equalsLine}
+          </div>
+          
+          <!-- Article entry -->
+          <div class="block group py-4">
+            <div class="flex items-start gap-6 md:gap-12">
+              <span class="font-azeret-mono font-medium text-sm md:text-base flex-shrink-0 pt-1">
+                <span class="text-lg leading-none">✱</span> 2
+              </span>
+              <div class="flex-1">
+                <p class="font-azeret-mono text-sm mb-2 tracking-wide">
+                  Author to be announced
+                </p>
+                <h2 class="font-libre-baskerville text-xl md:text-2xl lg:text-3xl leading-snug group-hover:underline transition-all duration-600">
+                  *Upcoming*
+                </h2>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="transition-opacity duration-600">
+          <!-- Divider -->
+          <div class="divider-equals overflow-hidden py-4 text-asterisk-divider" aria-hidden="true">
+            {equalsLine}
+          </div>
+          
+          <!-- Article entry -->
+          <div class="block group py-4">
+            <div class="flex items-start gap-6 md:gap-12">
+              <span class="font-azeret-mono font-medium text-sm md:text-base flex-shrink-0 pt-1">
+                <span class="text-lg leading-none">✱</span> 3
+              </span>
+              <div class="flex-1">
+                <p class="font-azeret-mono text-sm mb-2 tracking-wide">
+                  Author to be announced
+                </p>
+                <h2 class="font-libre-baskerville text-xl md:text-2xl lg:text-3xl leading-snug group-hover:underline transition-all duration-600">
+                  *Upcoming*
+                </h2>
+              </div>
+            </div>
+          </div>
+        </article>
+        */}
+        
+        <!-- Final divider -->
+        <div class="divider-equals overflow-hidden py-4 text-asterisk-divider" aria-hidden="true">
+          {equalsLine}
+        </div>
+        
+      </div>
+    </section>
+
   </main>
   
   <Footer />
