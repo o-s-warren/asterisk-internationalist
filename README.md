@@ -10,7 +10,3 @@ Asterisk Internationalist is a digital publication inspired by the Black Lesbian
 **Designed by:** [Em-Dash](https://em-dash.co/)  
 **Built by:** Olivia Warren  
 **Founded by:** Abiba, Aarushi & Saundra
-
-## Tech Stack
-Astro - Static site framework
-Tailwind CSS - Styling
