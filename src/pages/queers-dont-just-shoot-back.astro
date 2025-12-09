@@ -49,6 +49,11 @@ import recommendation23 from '../images/issue-1/recommendations/recommendation-2
 import recommendation24 from '../images/issue-1/recommendations/recommendation-24.jpg';
 import recommendation25 from '../images/issue-1/recommendations/recommendation-25.jpg';
 import recommendation26 from '../images/issue-1/recommendations/recommendation-26.jpg';
+import article1 from '../images/issue-1/recommendations/article-1.jpg';
+import article2 from '../images/issue-1/recommendations/article-2.jpg';
+import article3 from '../images/issue-1/recommendations/article-3.jpg';
+import article4 from '../images/issue-1/recommendations/article-4.jpg';
+import article5 from '../images/issue-1/recommendations/article-5.jpg';
 import RizkyCredit from '../images/issue-1//Credits_RIZKY.jpg';
 
 // Generate the equals divider string
@@ -134,8 +139,8 @@ const equalsLine = '='.repeat(360);
 
   </section>
 
-  <section class="mt-8 md:mt-28 px-6 md:px-12 pb-16 md:pb-24 overflow-hidden">
-    <section class="articl-text">
+  <section class="mt-8 md:mt-28 px-6 md:px-10 pb-16 md:pb-24 overflow-hidden">
+    <section class="article-text">
       <div class="article-pt-1 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
         <!-- image -->
         <div class="flex flex-col pl-3 md:pl-0 mx-auto md:mx-0">
@@ -552,21 +557,22 @@ const equalsLine = '='.repeat(360);
     </section>
 
     <section class="article-bibliography">
+
       <!-- BOOKS & JOURNALS SECTION -->
       <section class="pt-3 md:pt-12 pb-8">
         <!-- Section Header - Mobile: horizontal banner, Desktop: vertical sidebar -->
-        <div class="bg-asterisk-orange mb-8 md:hidden pl-1">
+        <div class="font-azeret-mono bg-asterisk-orange mb-8 md:hidden pb-1 pl-1">
           <p class="text-4xl font-medium">✱</p>
-          <h2 class="text-[27px] font-normal section-title">BOOKS & JOURNALS</h2>
+          <h2 class="text-3xl font-normal section-title leading-8 tracking-tighter">BOOKS & JOURNALS</h2>
         </div>
         
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-4">
           <!-- Desktop Section Header (hidden on mobile) -->
           <div class="hidden md:block relative pl-1">
-            <div class="bg-asterisk-orange absolute inset-0  w-full max-w-[163px] aspect-163/244"></div>
-            <div class="relative z-10 flex flex-col justify-end w-full max-w-[163px] aspect-163/244 p-1">
+            <div class="bg-asterisk-orange absolute inset-0 w-40 h-[244px] mx-auto"></div>
+            <div class="font-azeret-mono relative z-10 flex flex-col justify-end w-40 h-[244px] mx-auto p-1">
               <p class="text-4xl font-medium">✱</p>
-              <h2 class="text-[27px] font-normal section-title leading-6 tracking-tighter">BOOKS & JOURNALS</h2>
+              <h2 class="text-3xl font-normal section-title leading-8 tracking-tighter">BOOKS & JOURNALS</h2>
             </div>
           </div>
           
@@ -712,25 +718,25 @@ const equalsLine = '='.repeat(360);
       <!-- ARTICLES SECTION -->
       <section class="py-8">
         <!-- Section Header - Mobile -->
-        <div class="bg-asterisk-orange mb-8 md:hidden pl-1">
+        <div class="font-azeret-mono bg-asterisk-orange mb-8 md:hidden pb-1 pl-1">
           <p class="text-4xl font-medium">✱</p>
-          <h2 class="text-[27px] font-normal section-title">ARTICLES</h2>
+          <h2 class="text-3xl font-normal section-title leading-8 tracking-tighter">ARTICLES</h2>
         </div>
         
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-4">
           <!-- Desktop Section Header -->
           <div class="hidden md:block relative pl-1">
-            <div class="bg-asterisk-orange absolute inset-0  w-full max-w-[163px] aspect-163/244"></div>
-            <div class="relative z-10 flex flex-col justify-end w-full max-w-[163px] aspect-163/244 p-1">
+            <div class="bg-asterisk-orange absolute inset-0 w-40 h-[244px] mx-auto"></div>
+            <div class="font-azeret-mono relative z-10 flex flex-col justify-end w-40 h-[244px] mx-auto p-1">
               <p class="text-4xl font-medium">✱</p>
-              <h2 class="text-[27px] font-normal section-title leading-6 tracking-tighter">ARTICLES</h2>
+              <h2 class="text-3xl font-normal section-title leading-8 tracking-tighter">ARTICLES</h2>
             </div>
           </div>
           
           <!-- Article 1: Visual Life of Revolution -->
           <div class="resource-item">
-            <div class="img-shadow w-full max-w-[182px] aspect-182/142 overflow-hidden">
-              <img src={recommendation12.src} 
+            <div class="img-shadow w-full max-w-[162px] aspect-162/244 overflow-hidden">
+              <img src={article1.src} 
                   alt="The Visual Life of Revolution">
             </div>
             <p class="caption">
@@ -741,8 +747,8 @@ const equalsLine = '='.repeat(360);
           
           <!-- Article 2: Disappearing Decade -->
           <div class="resource-item">
-            <div class="img-shadow w-full max-w-[182px] aspect-182/142 overflow-hidden">
-              <img src={recommendation13.src} 
+            <div class="img-shadow w-full max-w-[162px] aspect-162/244 overflow-hidden">
+              <img src={article2.src} 
                   alt="The Disappearing Decade">
             </div>
             <p class="caption">
@@ -753,8 +759,8 @@ const equalsLine = '='.repeat(360);
           
           <!-- Article 3: Through Cinema We Shall Rise -->
           <div class="resource-item">
-            <div class="img-shadow w-full max-w-[182px] aspect-182/142 overflow-hidden">
-              <img src={recommendation14.src} 
+            <div class="img-shadow w-full max-w-[162px] aspect-162/244 overflow-hidden">
+              <img src={article3.src} 
                   alt="Through Cinema We Shall Rise">
             </div>
             <p class="caption">
@@ -765,8 +771,8 @@ const equalsLine = '='.repeat(360);
           
           <!-- Article 4: Fruits of Bachtiar Siagian -->
           <div class="resource-item">
-            <div class="img-shadow w-full max-w-[182px] aspect-182/142 overflow-hidden">
-              <img src={recommendation15.src} 
+            <div class="img-shadow w-full max-w-[162px] aspect-162/244 overflow-hidden">
+              <img src={article4.src} 
                   alt="The Fruits of Bachtiar Siagian">
             </div>
             <p class="caption">
@@ -777,12 +783,13 @@ const equalsLine = '='.repeat(360);
           
           <!-- Article 5: Revolutionary Desires -->
           <div class="resource-item">
-            <div class="img-shadow w-full max-w-[182px] aspect-182/142 overflow-hidden">
-              <img src={recommendation16.src} 
+            <div class="img-shadow w-full max-w-[162px] aspect-162/244 overflow-hidden">
+              <img src={article5.src} 
                   alt="Revolutionary Desires">
             </div>
             <p class="caption">
-              <a href="https://ultradogme.com/2025/04/02/revolutionary-desires/">Revolutionary Desires: Films of The Afro-Asian Film Festival and the 'Bandung Spirit' at IFFR 2025</a>, Cici Peng
+              <a href="https://ultradogme.com/2025/04/02/revolutionary-desires/">Revolutionary Desires: Films of The Afro-Asian Film Festival and the 'Bandung Spirit' at IFFR 2025</a>,<br>
+              Cici Peng
             </p>
           </div>
         </div>
@@ -791,18 +798,18 @@ const equalsLine = '='.repeat(360);
       <!-- FILM & MOVING IMAGE SECTION -->
       <section class="py-8 pb-16">
         <!-- Section Header - Mobile -->
-        <div class="bg-asterisk-orange mb-8 md:hidden pl-1">
+        <div class="font-azeret-mono bg-asterisk-orange mb-8 md:hidden pb-1 pl-1">
           <p class="text-4xl font-medium">✱</p>
-          <h2 class="text-[27px] font-normal section-title">FILM & MOVING IMAGE</h2>
+          <h2 class="text-3xl font-normal section-title leading-8 tracking-tighter">FILM & MOVING IMAGE</h2>
         </div>
         
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-4">
           <!-- Desktop Section Header -->
           <div class="hidden md:block relative pl-1">
-            <div class="bg-asterisk-orange absolute inset-0  w-full max-w-[163px] aspect-163/244"></div>
-            <div class="relative z-10 flex flex-col justify-end w-full max-w-[163px] aspect-163/244 p-1">
+            <div class="bg-asterisk-orange absolute inset-0 w-40 h-[244px] mx-auto"></div>
+            <div class="font-azeret-mono relative z-10 flex flex-col justify-end w-40 h-[244px] mx-auto p-1">
               <p class="text-4xl font-medium">✱</p>
-              <h2 class="text-[27px] font-normal section-title leading-6 tracking-tighter">FILM & MOVING IMAGE</h2>
+              <h2 class="text-3xl font-normal section-title leading-8 tracking-tighter">FILM & MOVING IMAGE</h2>
             </div>
           </div>
           

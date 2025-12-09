@@ -20,8 +20,7 @@
 @layer components {
   
   .caption {
-    font-size: 10px;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   
   .img-shadow {
@@ -30,7 +29,7 @@
   
   /* Resource item component */
   .resource-item {
-    @apply flex flex-col items-center;
+    @apply flex flex-col items-center mb-3;
   }
   
   .resource-item img {
